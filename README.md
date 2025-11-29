@@ -30,32 +30,27 @@
 ## 기술 스택
 
 ### Backend
-![Java](https://img.shields.io/badge/Java-1.6-blue)
-![Spring](https://img.shields.io/badge/Spring_Framework-3.1.1.RELEASE-brightgreen)
-![Servlet](https://img.shields.io/badge/Servlet_API-3.0.1-orange)
-![JSP](https://img.shields.io/badge/JSP-2.2-yellow)
-![MyBatis](https://img.shields.io/badge/MyBatis-3.2.8-red)
+- Java 1.6 (JDK 6)
+- Spring Framework 3.1.1.RELEASE
+- Servlet API 3.0.1
+- JSP 2.2
+- MyBatis 3.2.8
 
 ### Frontend
-![HTML5](https://img.shields.io/badge/HTML5-Markup-orange)
-![CSS3](https://img.shields.io/badge/CSS3-Style-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES5/ES6-yellow)
-![JSTL](https://img.shields.io/badge/JSTL-1.2-lightgrey)
+- HTML5
+- CSS3
+- JavaScript
+- JSTL 1.2
 
 ### Database
-![MySQL](https://img.shields.io/badge/MySQL-5.x-blue)
-![JDBC](https://img.shields.io/badge/Connector/J-5.1.48-blue)
+- MySQL 5.x
+- MySQL Connector/J 5.1.48
 
-### Server & Build
-![Tomcat](https://img.shields.io/badge/Tomcat-9.0.98-important)
-![Maven](https://img.shields.io/badge/Maven-Build_Tool-orange)
+### Server
+- Apache Tomcat 9.0.98
 
-## 시스템 요구사항
-
-- OS: Windows 10/11, macOS, Linux
-- JDK: Java 6 이상 권장
-- MySQL: 5.x 이상
-- Apache Tomcat: 9.0 이상
+### Build Tool
+- Maven
 
 ## 설치 및 실행
 
