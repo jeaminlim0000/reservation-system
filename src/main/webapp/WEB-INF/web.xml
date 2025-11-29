@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                            http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+
+    <!-- 애플리케이션 이름 -->
+    <display-name>reservation_project</display-name>
+
+    <!-- 인덱스 페이지 -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ========== LOGIN SERVLET ========== -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.lim.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========== LOGOUT SERVLET ========== -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.example.lim.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========== SCHEDULE SERVLET ========== -->
+    <servlet>
+        <servlet-name>ScheduleServlet</servlet-name>
+        <servlet-class>com.example.lim.ScheduleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ScheduleServlet</servlet-name>
+        <url-pattern>/api/schedule</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========== RESERVATION SERVLET ========== -->
+    <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>com.example.lim.ReservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/api/reserve</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========== DELETE RESERVATION SERVLET ========== -->
+    <servlet>
+        <servlet-name>DeleteReservationServlet</servlet-name>
+        <servlet-class>com.example.lim.DeleteReservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteReservationServlet</servlet-name>
+        <url-pattern>/api/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MainPage</servlet-name>
+        <jsp-file>/main.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainPage</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ToolCategoryServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolCategoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolCategoryServlet</servlet-name>
+        <url-pattern>/api/tool/categories</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToolItemsServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolItemsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolItemsServlet</servlet-name>
+        <url-pattern>/api/tool/items</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToolScheduleServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolScheduleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolScheduleServlet</servlet-name>
+        <url-pattern>/api/tool/schedule</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToolReserveServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolReserveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolReserveServlet</servlet-name>
+        <url-pattern>/api/tool/reserve</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToolReturnServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolReturnServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolReturnServlet</servlet-name>
+        <url-pattern>/api/tool/return</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToolMyLoansServlet</servlet-name>
+        <servlet-class>com.example.lim.ToolMyLoansServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToolMyLoansServlet</servlet-name>
+        <url-pattern>/api/tool/loans</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HistoryServlet</servlet-name>
+        <servlet-class>com.example.lim.HistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryServlet</servlet-name>
+        <url-pattern>/api/history</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- 관리자용 메타 목록 -->
+    <servlet>
+        <servlet-name>AdminToolMetaServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminToolMetaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToolMetaServlet</servlet-name>
+        <url-pattern>/admin/tool/meta</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 관리자: 목록 조회 -->
+    <servlet>
+        <servlet-name>AdminToolListServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminToolListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToolListServlet</servlet-name>
+        <url-pattern>/admin/tool/list</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 관리자: 도구 추가 -->
+    <servlet>
+        <servlet-name>AdminToolAddServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminToolAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToolAddServlet</servlet-name>
+        <url-pattern>/admin/tool/add</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ========== ROOM META SERVLET (캠퍼스/건물/층/호 목록) ========== -->
+    <servlet>
+        <servlet-name>RoomMetaServlet</servlet-name>
+        <servlet-class>com.example.lim.RoomMetaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomMetaServlet</servlet-name>
+        <url-pattern>/api/room</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminRoomMetaServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminRoomMetaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRoomMetaServlet</servlet-name>
+        <url-pattern>/admin/room/meta</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminRoomListServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminRoomListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRoomListServlet</servlet-name>
+        <url-pattern>/admin/room/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminRoomAddServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminRoomAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRoomAddServlet</servlet-name>
+        <url-pattern>/admin/room/add</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 삭제 -->
+    <servlet>
+        <servlet-name>AdminToolDeleteServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminToolDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToolDeleteServlet</servlet-name>
+        <url-pattern>/admin/tool/delete</url-pattern>
+    </servlet-mapping>
+
+    <!-- 수정 -->
+    <servlet>
+        <servlet-name>AdminToolUpdateServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminToolUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToolUpdateServlet</servlet-name>
+        <url-pattern>/admin/tool/update</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- 삭제 -->
+    <servlet>
+        <servlet-name>AdminRoomDeleteServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminRoomDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRoomDeleteServlet</servlet-name>
+        <url-pattern>/admin/room/delete</url-pattern>
+    </servlet-mapping>
+
+    <!-- 편집 -->
+    <servlet>
+        <servlet-name>AdminRoomUpdateServlet</servlet-name>
+        <servlet-class>com.example.lim.AdminRoomUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRoomUpdateServlet</servlet-name>
+        <url-pattern>/admin/room/update</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>ClassroomReturnServlet</servlet-name>
+        <servlet-class>com.example.lim.ClassroomReturnServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClassroomReturnServlet</servlet-name>
+        <url-pattern>/api/classroom/return</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>adminDeleteUser</servlet-name>
+        <servlet-class>com.example.lim.AdminDeleteUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>adminDeleteUser</servlet-name>
+        <url-pattern>/admin/deleteUser</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <!--로그인 안하면 못들어오게 하는 필터 연결-->
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.example.lim.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+
+
+
+
+</web-app>
