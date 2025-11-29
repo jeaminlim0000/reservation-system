@@ -40,7 +40,6 @@
 - HTML5
 - CSS3
 - JavaScript
-- JSTL 1.2
 
 ### Database
 - MySQL 5.x
